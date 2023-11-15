@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/icono.jpg" type="image/ico" />
+
+    <title>inicio|Administradores </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="#" class="site_title"> <span>CONTROL GASTOS</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="">
+                            <img src="../images/app-gastos.avif" alt="..." class="img-circle profile_img">
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+
+                            <ul class="nav side-menu">
+                                <li><a href="inicio_administradores.html"><i class="fa fa-home"></i> Home </a>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>Administradores</h3>
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-sitemap"></i> Gastos <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="control_gastos_principal.html">Control gastos</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a><i class="fa fa-user"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="#level1_1">Level One</a></li>
+
+
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>Gastos</h3>
+                            <ul class="nav side-menu">
+
+                                <li><a><i class="fa fa-windows"></i> Novedades <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="informes.html">Informes </a></li>
+                                        <li><a href="modificar_novedad.html">Seguimiento gastos</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="../index.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="../images/img.jpg" alt="">Gustavo Gutierrez
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="../index.html"><i
+                                            class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="dashboard_graph x_panel">
+                            <div class="x_title">
+                                <div class="col-md-6">
+                                    <h3>Novedades <small>grafica de gastos</small></h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="reportrange" class="pull-right"
+                                        style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                        <span>Septiembre 30, 2023 - Octubre 30, 2023</span> <b class="caret"></b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="x_content">
+                                <div class="demo-container" style="height:250px">
+                                    <div id="chart_plot_03" class="demo-placeholder"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="x_panel fixed_height_320">
+                            <div class="x_title">
+                                <h2>Gastos <small></small></h2>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>categorias</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>Hogar</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>123k</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>Impuestos</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>53k</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>ocio</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-red" role="progressbar" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>200k</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>Comida</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                <span class="sr-only">40% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>80k</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="x_panel tile fixed_height_320">
+                            <div class="x_title">
+                                <h2>Novedades <small></small></h2>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <table class="" style="width:100%">
+                                    <tr>
+                                        <th style="width:37%;">
+                                            <p>Top 5</p>
+                                        </th>
+                                        <th>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 ">
+                                                <p class="">tipo gasto</p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5 col-sm-5 ">
+                                                <p class="">cantidad </p>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <canvas class="canvasDoughnut" height="140" width="100"
+                                                style="margin: 15px 10px 10px 0"></canvas>
+                                        </td>
+                                        <td>
+                                            <table class="tile_info">
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square blue"></i>Operativos </p>
+                                                    </td>
+                                                    <td>30%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square green"></i>No operativos </p>
+                                                    </td>
+                                                    <td>10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square purple"></i>Gastos fijos </p>
+                                                    </td>
+                                                    <td>20%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square aero"></i>Gastos varibales </p>
+                                                    </td>
+                                                    <td>15%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p><i class="fa fa-square red"></i>otras </p>
+                                                    </td>
+                                                    <td>30%</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="x_panel fixed_height_320">
+                            <div class="x_title">
+                                <h2>Anotaciones y metas <small></small></h2>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="dashboard-widget-content">
+                                    <ul class="quick-list">
+                                        <li><i class="fa fa-line-chart"></i><a href="#">Crecieminto </a></li>
+                                        <li><i class="fa fa-thumbs-up"></i><a href="#">logros</a></li>
+                                        <li><i class="fa fa-calendar-o"></i><a href="modificar_novedad.html">Agenda tu dinero</a></li>
+                                        <li><i class="fa fa-cog"></i><a href="#">soluciones</a></li>
+                                        <li><i class="fa fa-area-chart"></i><a href="#">otros</a></li>
+                                    </ul>
+
+                                    <div class="sidebar-widget">
+                                        <h4>Profile Completion</h4>
+                                        <canvas width="150" height="80" id="chart_gauge_01" class=""
+                                            style="width: 160px; height: 100px;"></canvas>
+                                        <div class="goal-wrapper">
+                                            <span id="gauge-text" class="gauge-value gauge-chart pull-left">0</span>
+                                            <span class="gauge-value pull-left">%</span>
+                                            <span id="goal-text" class="goal-value pull-right">100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- start of weather widget -->
+
+                <!-- end of weather widget -->
+
+
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            CONTROL GASTOS - 2023 <a href=""></a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+    </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+</body>
+
+</html>

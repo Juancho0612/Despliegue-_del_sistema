@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../images/icono.jpg" type="image/ico" />
+
+        <title>HOME|usuario </title>
+
+        <!-- Bootstrap -->
+        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="../vendors/font-awesome/css/font-awesome.min.css"
+            rel="stylesheet">
+        <!-- NProgress -->
+        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <!-- iCheck -->
+        <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+        <!-- bootstrap-progressbar -->
+        <link
+            href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
+            rel="stylesheet">
+        <!-- JQVMap -->
+        <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+        <!-- bootstrap-daterangepicker -->
+        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css"
+            rel="stylesheet">
+
+        <!-- Custom Theme Style -->
+        <link href="../build/css/custom.min.css" rel="stylesheet">
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="#" class="site_title"> <span>Control De
+                                    Gastos</span></a>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <!-- menu profile quick info -->
+                        <div class="profile clearfix">
+                            <div class>
+                                <img src="../images/icono_pp.png" alt="..."
+                                    class="img-circle profile_img">
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu"
+                            class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a href="home.html"><i
+                                                class="fa fa-home"></i> Home
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menu_section">
+                                <h3>Usuarios</h3>
+                                <ul class="nav side-menu">
+
+                                    <li><a><i class="fa fa-windows"></i> Gestion
+                                            de gastos <span
+                                                class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a
+                                                    href="crear_novedades_admin.html">Registrar salario</a>
+                                            </li>
+                                            <li><a href="crear_novedades.html">Registrar
+                                                gastos</a>
+                                            </li>
+                                            <li><a href="informes.html">Reporte de gastos
+                                                </a></li>
+                                            <li><a href="modificar_novedad.html">visualizar gastos
+                                                    </a></li>
+                                            <li><a href="eliminar_novedad.html">Analisis de 
+                                                    gastos</a></li>
+                                            
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- /sidebar menu -->
+
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer hidden-small">
+                            <a data-toggle="tooltip" data-placement="top"
+                                title="Settings">
+                                <span class="glyphicon glyphicon-cog"
+                                    aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top"
+                                title="FullScreen">
+                                <span class="glyphicon glyphicon-fullscreen"
+                                    aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top"
+                                title="Lock">
+                                <span class="glyphicon glyphicon-eye-close"
+                                    aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top"
+                                title="Logout" href="../index.html">
+                                <span class="glyphicon glyphicon-off"
+                                    aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <nav class="nav navbar-nav">
+                            <ul class=" navbar-right">
+                                <li class="nav-item dropdown open"
+                                    style="padding-left: 15px;">
+                                    <a href="javascript:;"
+                                        class="user-profile dropdown-toggle"
+                                        aria-haspopup="true" id="navbarDropdown"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="../images/img.jpg" alt>Gustavo
+                                        Gutierrez
+                                    </a>
+                                    <div
+                                        class="dropdown-menu dropdown-usermenu pull-right"
+                                        aria-labelledby="navbarDropdown">
+
+                                        <a class="dropdown-item"
+                                            href="../index.html"><i
+                                                class="fa fa-sign-out pull-right"></i>
+                                            Log Out</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <!-- top tiles -->
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4  profile_details">
+                            <div class="well profile_view">
+                                <div class="col-sm-12">
+                                    <h4 class="brief"><i>Datos del Usuario </i></h4>
+                                    <div class="left col-md-7 col-sm-7">
+                                        <h2>Rol:<strong>Usuario</strong> </h2>
+                                        <p><strong>nombre de usuario: </strong>
+                                            user
+                                        </p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-envelope"></i>
+                                                correo: descuderom@gmail.com</li>
+
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="right col-md-5 col-sm-5 text-center">
+                                        <img src="../images/img.jpg" alt
+                                            class="img-circle img-fluid">
+                                    </div>
+                                </div>
+                                <div class=" profile-bottom text-center">
+
+                                    <div class=" col-sm-6 emphasis">
+                                        <button type="button"
+                                            class="btn btn-success btn-sm"><i
+                                                class="fa fa-user">
+                                            </i> Cambiar clave
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 col-sm-8 ">
+                            <div class="x_panel tile fixed_height_320">
+                                <div class="x_title">
+                                    <h2>Gráfico de Novedades </h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i
+                                                    class="fa fa-chevron-up"></i></a>
+                                        </li>
+
+                                        <li><a class="close-link"><i
+                                                    class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <h4>Últimos 5 meses</h4>
+                                    <div class="widget_summary">
+                                        <div class="w_left w_25">
+                                            <span>Mayo</span>
+                                        </div>
+                                        <div class="w_center w_55">
+                                            <div class="progress">
+                                                <div
+                                                    class="progress-bar bg-green"
+                                                    role="progressbar"
+                                                    aria-valuenow="20"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 20%;">
+                                                    <span class="sr-only">20%
+                                                        Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w_right w_20">
+                                            <span>20 Novedades</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="widget_summary">
+                                        <div class="w_left w_25">
+                                            <span>Abril</span>
+                                        </div>
+                                        <div class="w_center w_55">
+                                            <div class="progress">
+                                                <div
+                                                    class="progress-bar bg-green"
+                                                    role="progressbar"
+                                                    aria-valuenow="60"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 45%;">
+                                                    <span class="sr-only">60%
+                                                        Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w_right w_20">
+                                            <span>45 Novedades</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="widget_summary">
+                                        <div class="w_left w_25">
+                                            <span>Marzo</span>
+                                        </div>
+                                        <div class="w_center w_55">
+                                            <div class="progress">
+                                                <div
+                                                    class="progress-bar bg-green"
+                                                    role="progressbar"
+                                                    aria-valuenow="60"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 25%;">
+                                                    <span class="sr-only">60%
+                                                        Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w_right w_20">
+                                            <span>25 Novedades</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="widget_summary">
+                                        <div class="w_left w_25">
+                                            <span>Febrero</span>
+                                        </div>
+                                        <div class="w_center w_55">
+                                            <div class="progress">
+                                                <div
+                                                    class="progress-bar bg-green"
+                                                    role="progressbar"
+                                                    aria-valuenow="60"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 5%;">
+                                                    <span class="sr-only">60%
+                                                        Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w_right w_20">
+                                            <span>5 Novedades</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="widget_summary">
+                                        <div class="w_left w_25">
+                                            <span>Enero</span>
+                                        </div>
+                                        <div class="w_center w_55">
+                                            <div class="progress">
+                                                <div
+                                                    class="progress-bar bg-green"
+                                                    role="progressbar"
+                                                    aria-valuenow="60"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 63%;">
+                                                    <span class="sr-only">60%
+                                                        Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w_right w_20">
+                                            <span>63 Novedades</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /page content -->
+
+                <!-- footer content -->
+                <footer>
+                    <div class="pull-right">
+                        Gestion de Gastos <a href>TDEA 2023</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FastClick -->
+        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../vendors/nprogress/nprogress.js"></script>
+        <!-- Chart.js -->
+        <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+        <!-- gauge.js -->
+        <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+        <!-- bootstrap-progressbar -->
+        <script
+            src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <!-- iCheck -->
+        <script src="../vendors/iCheck/icheck.min.js"></script>
+        <!-- Skycons -->
+        <script src="../vendors/skycons/skycons.js"></script>
+        <!-- Flot -->
+        <script src="../vendors/Flot/jquery.flot.js"></script>
+        <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+        <script src="../vendors/Flot/jquery.flot.time.js"></script>
+        <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+        <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+        <!-- Flot plugins -->
+        <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+        <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+        <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+        <!-- DateJS -->
+        <script src="../vendors/DateJS/build/date.js"></script>
+        <!-- JQVMap -->
+        <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+        <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+        <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+        <!-- bootstrap-daterangepicker -->
+        <script src="../vendors/moment/min/moment.min.js"></script>
+        <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+        <!-- Custom Theme Scripts -->
+        <script src="../build/js/custom.min.js"></script>
+
+    </body>
+
+</html>

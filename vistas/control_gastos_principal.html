@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../images/icono.jpg" type="image/ico" />
+
+        <title>inicio|Gastos </title>
+
+        <!-- Bootstrap -->
+        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- NProgress -->
+        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <!-- iCheck -->
+        <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+        <!-- bootstrap-progressbar -->
+        <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+        <!-- JQVMap -->
+        <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+        <!-- bootstrap-daterangepicker -->
+        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+        <!-- Custom Theme Style -->
+        <link href="../build/css/custom.min.css" rel="stylesheet">
+    </head>
+
+    <style>
+        .x_title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #5d6b69;
+            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #26b09e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        .add-button,
+        .delete-button {
+            padding: 10px 20px;
+            background-color: #5d6b69;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-button:hover,
+        .delete-button:hover {
+            background-color: #26b09e;
+        }
+
+        .delete-button {
+            background-color: #d9534f;
+        }
+    </style>
+</head>
+
+<body class="nav-md" class="nav-md" onload="insertarFecha()">
+    <div class="container body">
+        <div class="main_container">
+            <!-- Segundo sidebar -->
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="#" class="site_title"> <span>CONTROL GASTOS</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="">
+                            <img src="" alt="..." class="img-circle profile_img">
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><a href="inicio_administradores.html"><i class="fa fa-home"></i> Home </a></li>
+                            </ul>
+                        </div>
+                        
+
+                        <!-- Incluir las opciones de navegación del primer sidebar -->
+                        <div class="menu_section">
+                            <h3>Administradores</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-sitemap"></i> Gastos <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="control_gastos_principal.html">Control gastos</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-user"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="#level1_1">Level One</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>Gastos</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-windows"></i> Novedades <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="informes.html">Informes</a></li>
+                                        <li><a href="modificar_novedad.html">Seguimiento gastos</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Fin de opciones del primer sidebar -->
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                <body class="nav-md">
+                    <div class="container body">
+                        <div class="right_col" role="main">
+                            <div class="x_content">
+                                <h2 class="x_title">Control gastos personales</h2>
+                                <table id="miTabla">
+                                    <thead>
+                                        <tr>
+                                            <th>Categoría</th>
+                                            <th>Descripción</th>
+                                            <th>Monto</th>
+                                            <th>Fecha actual</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td contenteditable="true" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Ingrese la categoría"></td>
+                                            <td contenteditable="true" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Ingrese la descripción"></td>
+                                            <td contenteditable="true" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Ingrese el monto">$</td>
+                                            <td id="fechaActual" contenteditable="true"></td>
+                                            <td><button class="delete-button" onclick="eliminarFila(this)"><i
+                                                        class="fas fa-trash"></i></button></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div class="buttons">
+                                    <button class="add-button" onclick="agregarFila()">Añadir</button>
+                                    <button class="save-button" onclick="guardarRegistros()">Guardar</button>
+                                </div>
+                                <div id="registrosGuardados"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        function eliminarFila(button) {
+                            const row = button.parentNode.parentNode;
+                            row.parentNode.removeChild(row);
+                        }
+
+                        function agregarFila() {
+                            const table = document.getElementById('miTabla').getElementsByTagName('tbody')[0];
+                            const newRow = table.insertRow();
+
+                            const today = new Date();
+                            const day = String(today.getDate()).padStart(2, '0');
+                            const month = String(today.getMonth() + 1).padStart(2, '0');
+                            const year = today.getFullYear();
+                            const formattedDate = `${day}/${month}/${year}`;
+
+                            for (let i = 0; i < 4; i++) {
+                                const cell = newRow.insertCell();
+                                const newText = document.createTextNode('');
+                                cell.appendChild(newText);
+                                cell.contentEditable = true;
+
+                                if (i === 3) {
+                                    newText.textContent = formattedDate;
+                                }
+                            }
+
+                            const deleteCell = newRow.insertCell();
+                            const deleteButton = document.createElement('button');
+                            deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+                            deleteButton.classList.add('delete-button');
+                            deleteButton.onclick = function () {
+                                eliminarFila(this);
+                            };
+                            deleteCell.appendChild(deleteButton);
+                        }
+                        function guardarRegistros() {
+                            const table = document.getElementById('miTabla').getElementsByTagName('tbody')[0];
+                            const rows = table.getElementsByTagName('tr');
+
+                            let registros = '';
+
+                            for (let i = 0; i < rows.length; i++) {
+                                const cells = rows[i].getElementsByTagName('td');
+
+
+
+
+                                for (let j = 0; j < cells.length - 1; j++) {
+                                    registros += `${cells[j].textContent}\t`;
+                                }
+
+                                registros += '\n';
+                            }
+
+                            document.getElementById('registrosGuardados').innerText = registros;
+                        }
+
+                        function mostrarRegistros() {
+                            const table = document.getElementById('miTabla').getElementsByTagName('tbody')[0];
+                            const rows = table.getElementsByTagName('tr');
+
+                            let registros = '';
+
+                            for (let i = 0; i < rows.length; i++) {
+                                const cells = rows[i].getElementsByTagName('td');
+
+                                for (let j = 0; j < cells.length - 1; j++) {
+                                    registros += `${cells[j].textContent}\t`;
+                                }
+
+                                registros += '\n';
+                            }
+
+
+                            window.alert('Registros guardados:\n\n' + registros);
+                        }
+                        console.log(registros);
+
+
+                        function insertarFecha() {
+                            const today = new Date();
+                            const day = String(today.getDate()).padStart(2, '0');
+                            const month = String(today.getMonth() + 1).padStart(2, '0');
+                            const year = today.getFullYear();
+                            const formattedDate = `${day}/${month}/${year}`;
+
+                            const fechaActualCell = document.getElementById('fechaActual');
+                            fechaActualCell.textContent = formattedDate;
+                        }    
+                    </script>
+
+                </body>
+            </div>
+        </div>
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                CONTROL GASTOS - 2023 <a href=""></a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+</body>
+
+</html>
